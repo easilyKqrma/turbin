@@ -38,10 +38,16 @@ app.use((req, res, next) => {
 });
 
 (async () => {
-  // Initialize database with default data
-  await initializeDatabase();
+  let server;
   
-  const server = await registerRoutes(app);
+  try {
+    // Initialize database with default data (skip if tables don't exist)
+    await initializeDatabase();
+  } catch (error) {
+    console.warn('Database initialization skipped (tables may not exist yet):', error.message);
+  }
+  
+  server = await registerRoutes(app);
 
   app.use((err: any, _req: Request, res: Response, _next: NextFunction) => {
     const status = err.status || err.statusCode || 500;

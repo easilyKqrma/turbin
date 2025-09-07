@@ -10,17 +10,14 @@ chmod +x install-dependencies.sh
 echo "📦 Ejecutando instalación de dependencias..."
 ./install-dependencies.sh
 
-# Ejecutar push de base de datos (crear tablas)
-echo "🗃️ Configurando base de datos..."
-npm run db:push --force
-
-# Construir la aplicación
+# Construir la aplicación PRIMERO
 echo "🔨 Construyendo aplicación..."
 npm run build
 
-# Inicializar datos por defecto en la base de datos
-echo "🌱 Inicializando datos de base de datos..."
-NODE_ENV=production npx tsx server/init-database.ts
+# Configurar base de datos de manera robusta
+echo "🗃️ Configurando base de datos..."
+chmod +x setup-database.js
+node setup-database.js
 
 echo "✅ ¡Build completado exitosamente!"
 echo "🎉 La aplicación está lista para producción"

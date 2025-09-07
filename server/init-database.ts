@@ -105,7 +105,7 @@ export async function initializeDatabase() {
           firstName: account.firstName,
           lastName: account.lastName,
           isAdmin: false,
-          plan: account.plan,
+          plan: account.plan as 'free' | 'plus' | 'pro',
           isPublicProfile: false
         });
         console.log(`${account.plan} test user created successfully`);
@@ -118,7 +118,10 @@ export async function initializeDatabase() {
     const existingEmotions = await db.select().from(emotions).limit(1);
     if (existingEmotions.length === 0) {
       console.log("Seeding default emotions...");
-      await db.insert(emotions).values(defaultEmotions);
+      await db.insert(emotions).values(defaultEmotions.map(emotion => ({
+        ...emotion,
+        category: emotion.category as 'positive' | 'negative' | 'neutral'
+      })));
       console.log(`Inserted ${defaultEmotions.length} default emotions`);
     }
     

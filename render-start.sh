@@ -19,5 +19,14 @@ fi
 echo "🌍 Variables de entorno configuradas"
 echo "📊 Iniciando servidor en puerto: ${PORT:-5000}"
 
+# Verificar base de datos antes de iniciar
+echo "🗃️ Verificando base de datos..."
+if [ -f "setup-database.js" ]; then
+    chmod +x setup-database.js
+    node setup-database.js || echo "⚠️ Base de datos ya configurada o error menor"
+else
+    echo "⚠️ Script de configuración no encontrado, continuando..."
+fi
+
 # Iniciar la aplicación
 exec npm start
