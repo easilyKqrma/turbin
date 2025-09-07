@@ -1,0 +1,17 @@
+# Configuración para Render
+services:
+  - type: web
+    name: holapage
+    env: node
+    buildCommand: "./render-build.sh"
+    startCommand: "./render-start.sh"
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 5000
+    # Variables que necesitas configurar manualmente en Render:
+    # DATABASE_URL - URL de tu base de datos PostgreSQL
+    # PAYPAL_CLIENT_ID - ID de cliente de PayPal
+    # PAYPAL_CLIENT_SECRET - Secreto de cliente de PayPal
+    # PAYPAL_ENVIRONMENT - sandbox o live
