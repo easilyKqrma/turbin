@@ -1,0 +1,53 @@
+[Warning] global_session_not_found – {timestamp: "1757042393938", uid: "uid_034101d6f6_mdm6mtg6mji", env: "production", …} (js, line 3)
+{timestamp: "1757042393938", uid: "uid_034101d6f6_mdm6mtg6mji", env: "production", clientId: "AVlqzJGxyAGut70jZ0UiyzAY4BhNnWSWfYTCwTLkhNs-GG3dfgPoWfPFfA8ac_cpZFUBEO3Ev_hCSNQl", csnwCorrelationId: "f915935bed8b3", …}Object
+[Error] PayPal SDK Error: – Error: Document is ready and element #paypal-button-container does not exist — js:3:36331
+Error: Document is ready and element #paypal-button-container does not exist — js:3:36331
+	onError (PayPalButton.tsx:106)
+	(anonymous function) (js:3:17218)
+	u (js:3:31132)
+	trigger (js:3:31195)
+	(anonymous function) (js:3:17218)
+	(anonymous function) (js:3:118444)
+	(anonymous function) (js:3:14718)
+	(anonymous function) (js:3:15379)
+	render (js:3:118414)
+	(anonymous function) (js:3:14609)
+	(anonymous function) (js:3:15379)
+	w (js:3:133194)
+	initializePayPal (PayPalButton.tsx:129)
+	(anonymous function) (PayPalButton.tsx:46)
+[Error] Failed to initialize PayPal components: – TypeError: window.paypal.CardFields.isEligible is not a function. (In 'window.paypal.CardFields.isEligible()', 'window.paypal.CardFields.isEligible' is undefined) — https://733d8c2d-b715-4d2d-a80e-132d63a9ce25-00-6x…aneway.replit.dev/src/components/PayPalButton.tsx:129
+TypeError: window.paypal.CardFields.isEligible is not a function. (In 'window.paypal.CardFields.isEligible()', 'window.paypal.CardFields.isEligible' is undefined) — https://733d8c2d-b715-4d2d-a80e-132d63a9ce25-00-6x…aneway.replit.dev/src/components/PayPalButton.tsx:129
+	initializePayPal (PayPalButton.tsx:181)
+	(anonymous function) (PayPalButton.tsx:46)
+[Error] paypal_js_sdk_v5_unhandled_exception – {err: "Document is ready and element #paypal-button-conta….replit.dev/src/components/PayPalButton.tsx:46:27", timestamp: "1757042393950", uid: "uid_034101d6f6_mdm6mtg6mji", …}
+{err: "Document is ready and element #paypal-button-conta….replit.dev/src/components/PayPalButton.tsx:46:27", timestamp: "1757042393950", uid: "uid_034101d6f6_mdm6mtg6mji", env: "production", clientId: "AVlqzJGxyAGut70jZ0UiyzAY4BhNnWSWfYTCwTLkhNs-GG3dfgPoWfPFfA8ac_cpZFUBEO3Ev_hCSNQl", …}Object
+	b (js:3:60398)
+	N (js:3:61394)
+	(anonymous function) (js:3:70953)
+	(anonymous function) (js:3:14179)
+	(anonymous function) (js:3:14186)
+[Error] Error: Document is ready and element #paypal-button-container does not exist
+	(anonymous function) (js:3:14142)
+[Info] Blocked connection to known tracker https://www.paypal.com/xoplatform/logger/api/logger?disableSetCookie=true in frame displaying https://733d8c2d-b715-4d2d-a80e-132d63a9ce25-00-6xp1nsnfbzok.janeway.replit.dev/checkout#plus (js, line 3)
+[Info] Blocked connection to known tracker https://www.paypal.com/xoplatform/logger/api/logger?disableSetCookie=true (js, line 3)
+[Error] Resource blocked by content blocker
+	(anonymous function) (js:3:45706)
+	n (js:3:13291)
+	Ye (js:3:44084)
+	(anonymous function) (js:3:17218)
+	(anonymous function) (js:3:59380)
+	(anonymous function) (js:3:60749)
+	(anonymous function) (js:3:17218)
+	(anonymous function) (js:3:17218)
+	(anonymous function) (js:3:61034)
+[Error] XMLHttpRequest cannot load https://www.paypal.com/xoplatform/logger/api/logger?disableSetCookie=true due to access control checks.
+	(anonymous function) (js:3:45706)
+	n (js:3:13291)
+	Ye (js:3:44084)
+	(anonymous function) (js:3:17218)
+	(anonymous function) (js:3:59380)
+	(anonymous function) (js:3:60749)
+	(anonymous function) (js:3:17218)
+	(anonymous function) (js:3:17218)
+	(anonymous function) (js:3:61034)

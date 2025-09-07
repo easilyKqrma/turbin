@@ -1,0 +1,27 @@
+{
+  "version": "7",
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1756966757389,
+      "tag": "0000_omniscient_cloak",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1757096372777,
+      "tag": "0001_soft_synch",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1757137739826,
+      "tag": "0002_salty_namorita",
+      "breakpoints": true
+    }
+  ]
+}
